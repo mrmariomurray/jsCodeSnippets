@@ -2,22 +2,26 @@ function fibonacciGenerator (n) {
 //Do NOT change any of the code above 👆
     
     //Write your code here:
-
-    var fibArray = [0,1];
     
-    if (n >= 0 && n <= 1) {
-        console.log(fibArray);
-    }
+    // let n = number of items in the array
+    // the first two numbers MUST be 0 & 1
     
-    for (var i = 2; i < n; i++) {
+    var output = [];
+    
+    if (n===1) {
+        output = [0];
+    } 
+    else if (n===2) {
+        output = [0,1];
+    } 
+    else  {
+        output = [0,1];
         
-        fibArray.push(fibArray[(i-1)] + fibArray[(i-2)]);
-        console.log(fibArray);
+        for (i=2; i<n; i++) {
+            output.push(output[output.length-2] + output[output.length - 1]);
+        }
     }
-
-    
-    
-   
+    return output
     
     
     //Return an array of fibonacci numbers starting from 0.
