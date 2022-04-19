@@ -1,5 +1,5 @@
-//Changes the li and the h1 of the page using Dom manipulation//
 
+// changing heading and the third li
 function changeName() {
     var changeLi = document.querySelector('ul').lastElementChild
     var greeting = document.firstElementChild.lastElementChild.firstElementChild;
@@ -9,8 +9,7 @@ function changeName() {
    
     if (greeting.innerHTML === "Hello" && changeLi.innerHTML === "Third") {
          userName =  prompt("What is your name?")
-        // greeting.innerHTML = "Hello"
-        // changeLi.innerHTML = "Third"
+   
         greeting.innerHTML = userName;
          changeLi.innerHTML = userName;
     } else if (greeting.innerHTML === "" && changeLi.innerHTML === "") {
@@ -18,8 +17,8 @@ function changeName() {
         changeLi.innerHTML = "Third"
     }
 
-    
-    
+    //Checking a Box
+    document.querySelector("input").click();
 }
 
 changeName();
