@@ -1,4 +1,4 @@
-
+//Changes the li and the h1 of the page using Dom manipulation//
 
 function changeName() {
     var changeLi = document.querySelector('ul').lastElementChild
